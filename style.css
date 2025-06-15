@@ -1,126 +1,172 @@
+/* Reset geral */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Montserrat';
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-  margin: 0;
-  font-family: 'Montserrat';
-  background-color: #F3F2F2;
-  color: #333;
+    background-color: #F3F2F2;
+    color: #061726;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-header {
-  background-color: #F3F2F2;
-  color: white;
-  padding: 10px 0;
+
+.header-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
 }
 
-header .logo {
-  height: 50px;
+.logo {
+  height: 60px;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
   gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li a {
   color: #06172C;
   text-decoration: none;
-  font-weight: 'Montserrat';
-  
+  font-weight: bold;
+  font-family: 'Montserrat';
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 .banner {
-
-  background-size: cover;
-  background-position: center;
+    background-size: cover;
+    background-position: center;
+    color: #061726;
+    text-align: left;
+    padding: 60px 20px;
+}
+.orange-bold {
   color: #EB7423;
-  text-align:left;
-  padding: 60px 20px;
+  font-weight: bold;
 }
 
 .banner h1 {
-  font-size: 2.5em;
+    font-size: 60px;
+    font-family: 'montserrat';
+    font-weight: bold;
+    
 }
-
 .banner p {
-  font-size: 1.2em;
+    font-size: 25px;
 }
 
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #06172C;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #06172C;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
 }
 
 .conteudo {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .servicos {
-  padding: 40px 20px;
-  background-color: #ffffff;
-  text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .servicos h2 {
-  font-size: 2em;
-  margin-bottom: 30px;
-  color: #006699;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color:#061726;
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border-color: #EB7423;
 }
 
 .card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  padding: 20px;
-  width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #EB7423;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
 }
 
 .card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
 }
 
 .card h3 {
-  color: #333;
-  margin-bottom: 10px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .card p {
-  color: #555;
-  font-size: 0.95em;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.video-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+
+.rodape {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+.rodape-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.rodape a {
+    color: #EB7423;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
 }

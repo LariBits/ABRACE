@@ -18,15 +18,14 @@ Queremos ajudar pessoas que estão começando uma nova vida no Brasil a se senti
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **HTML5**
 - **CSS3**
-- *(Possível uso de JavaScript nas próximas fases do projeto)*
 
 ---
 
-## 🎨 Design
+## Design
 
 O layout foi criado no **Figma**, com uma identidade visual acolhedora e acessível.
 

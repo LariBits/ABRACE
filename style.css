@@ -7,8 +7,9 @@ body {
     background-color: #ffffff; 
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     color: #06172C; 
+    box-sizing: border-box
 }
 
 .container {
@@ -20,12 +21,14 @@ body {
 .navbar {
     background-color: #E8E8E8; 
     padding: 15px 0;
+    
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .logo {
@@ -51,6 +54,8 @@ nav ul li a:hover,
 nav ul li a.active {
     color: #EB7423; 
     text-decoration: underline;
+    text-decoration: none;
+    color: inherit;
 }
 
 
@@ -101,6 +106,7 @@ nav ul li a.active {
 .servicos {
     padding: 40px 20px;
     text-align: center;
+    
 }
 
 .servicos h2 {
@@ -120,6 +126,12 @@ nav ul li a.active {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    
+}
+.recursos a{
+    font-style: normal;
+    text-decoration: none;
+    color: inherit;
 }
 
 .card-recursos {
@@ -128,8 +140,10 @@ nav ul li a.active {
     border-radius: 8px;
     padding: 20px;
     width: 300px;
+    height: 200px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
 .card-recursos:hover {
@@ -254,7 +268,7 @@ nav ul li a.active {
     cursor: pointer;
 }
 
-.dica-cultural {
+.card-lateral {
     flex: 1 1 35%;
     background-color: #06172C; 
     color: white;
@@ -263,7 +277,7 @@ nav ul li a.active {
     text-align: left;
 }
 
-.dica-cultural h2 {
+.card-lateral h2 {
     margin-top: 0;
 }
 
@@ -272,7 +286,7 @@ nav ul li a.active {
         flex-direction: column;
     }
 
-    .caixa-frase, .dica-cultural {
+    .caixa-frase, .card-lateral {
         margin-right: 0;
         margin-bottom: 20px;
     }
@@ -293,86 +307,382 @@ nav ul li a.active {
 
 /*PAGINA RECURSOS*/
 
-.card-title {
-    background-color: #f8f9fa; /* Cor de fundo para o título */
+.card-lateral-doc{
+    gap: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.conteudo-recursos {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+}
+
+.card-doc {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 0;
-    font-size: 1.5em;
-    color: #fd7e14; /* Cor laranja para o título "Documentos essenciais" */
-    border-bottom: 1px solid #e9ecef;
+    border-left: 6px solid #fd7e14;
+    min-width: 300px;
+}
+
+.card-doc .card-title {
+    color: #fd7e14;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .accordion-item {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+}
+
+.accordion-header {
+    background-color: #fff;
+    color: #2d3748;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.accordion-header:hover {
+    background-color: #f7fafc;
+}
+
+.accordion-header .icon {
+    color: #718096;
+    font-size: 0.8em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    padding: 0 15px;
+}
+
+.accordion-header.active + .accordion-content {
+    max-height: 300px;
+    padding: 10px;
+    overflow-y:auto;
+}
+
+.accordion-content p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.accordion-content p:last-child {
+    margin-bottom: 0;
 }
 
 .accordion-item:last-child {
     border-bottom: none;
 }
 
-.accordion-header {
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-    padding: 15px 20px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    font-size: 1.1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-
-.accordion-header:hover {
-    background-color: #f0f0f0;
-}
-
-.accordion-header .icon {
-    font-size: 0.8em;
-    transition: transform 0.3s ease;
-}
-
-.accordion-header.active .icon {
-    transform: rotate(180deg); /* Gira a seta quando ativo */
-}
-
-.accordion-content {
-    padding: 0 20px;
-    background-color: #fdfdfd;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding para a transição */
-}
-
-.accordion-content {
-    padding: 0 20px;
-    background-color: #fdfdfd;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out; 
-}
-
-
-.accordion-content p:last-child {
-    margin-bottom: 0;
-}
-
-
-.accordion-header.active + .accordion-content {
-    max-height: 400px; 
-    padding: 15px 20px 20px 20px; 
-    overflow-y: auto; 
-}
 .accordion-content ul {
-    margin-top: 10px;
-    margin-bottom: 15px;
     padding-left: 20px;
-    color: #555;
+    color: #4a5568;
+    margin-bottom: 15px;
 }
 
 .accordion-content li {
     margin-bottom: 5px;
+    list-style-type: disc;
+}
+
+.card-lateral-ajuda{
+    background-color: #EB7423;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    margin-top: 20px;
+}
+.card-lateral-ajuda h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-lateral-ajuda p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.card-lateral-doc {
+    background-color: #0d263b;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+}
+
+.card-lateral-doc h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-lateral-doc h2:first-child {
+    font-size: 1.2em;
+}
+
+.card-lateral-doc p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* PAGINA SOBRE */
+
+.section-cards-missao-objetivos {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-sobre {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-sobre h1 {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.card-sobre p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.card-sobre ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.card-sobre ul li {
+    font-size: 17px;
+    line-height: 1.0;
+    color: #ffffff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.card-sobre ul li:last-child {
+    margin-bottom: 0;
+}
+
+.card-missao {
+    background-color: #06172C;
+}
+
+.card-missao h1 {
+    color: #ffffff;
+}
+
+.card-objetivos {
+    background-color: #EB7423;
+}
+
+.card-objetivos h1 {
+    color: #ffffff;
+}
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+    .card-sobre {
+        max-width: calc(100% - 40px); 
+    }
+}
+
+@media (max-width: 576px) {
+    .card-sobre {
+        padding: 30px 20px;
+    }
+
+    .card-sobre h1 {
+        font-size: 1.8em;
+    }
+
+    .card-sobre p,
+    .card-sobre ul li {
+        font-size: 1em;
+    }
+
+    .card-sobre ul li::before {
+        font-size: 1.1em;
+        top: 2px; 
+    }
+}
+
+/*GRUPO*/
+.equipe-section {
+    padding: 80px 20px; /* Espaçamento interno da seção */
+    background-color: #06172C; /* Fundo branco para a seção da equipe */
+    text-align: center; /* Centraliza o título e a descrição da equipe */
+}
+
+.container-equipe {
+    max-width: 1200px; /* Largura máxima do conteúdo da equipe */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+.titulo-equipe h1 {
+    font-size: 2.5em; /* Tamanho do título "Equipe" */
+    color: #EB7423; /* Cor do título */
+    margin-bottom: 15px;
+}
+
+.titulo-equipe p {
+    font-size: 1.1em;
+    color: #d4d4d4;
+    line-height: 1.6;
+    margin-bottom: 50px; /* Espaço abaixo da descrição para os cards */
+    max-width: 800px; /* Limita a largura do parágrafo */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-membros {
+    display: flex; /* Habilita o layout flexível para os cards de membro */
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 30px; /* Espaçamento entre os cards */
+}
+
+.card-membro {
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px 20px; /* Espaçamento interno do card */
+    text-align: center; /* Centraliza o conteúdo dentro de cada card */
+    width: 250px; /* Largura fixa para cada card de membro */
+    display: flex; /* Para centralizar o conteúdo verticalmente */
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo (texto e imagem) no centro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito hover */
+}
+
+.card-membro:hover {
+    transform: translateY(-8px); /* Leve levantamento ao passar o mouse */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover */
+}
+
+.card-membro img {
+    width: 120px; /* Tamanho da imagem de perfil */
+    height: 120px; /* Garante que a imagem seja quadrada */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+    border: 3px solid #EB7423; /* Borda laranja ao redor da imagem */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+}
+
+.card-membro h2 {
+    font-size: 1.5em; /* Tamanho do nome do membro */
+    color: #ffffff; /* Cor do nome */
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.card-membro .role { /* Estilo para o cargo */
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.card-membro .location { /* Estilo para a localização */
+    font-size: 0.9em;
+    color: #c5c5c5;
+    margin-bottom: 0; /* Remove margem inferior do último p */
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .titulo-equipe h1 {
+        font-size: 2.2em;
+    }
+
+    .titulo-equipe p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .card-membro {
+        width: calc(50% - 20px); /* Dois cards por linha em tablets */
+        min-width: 200px; /* Largura mínima para evitar que fiquem muito pequenos */
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-membro {
+        width: 90%; /* Um card por linha em celulares */
+        max-width: 300px; /* Garante que o card não seja muito largo */
+        padding: 20px 15px;
+    }
+
+    .card-membro img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .card-membro h2 {
+        font-size: 1.3em;
+    }
 }

@@ -9,7 +9,6 @@
     <!-- Fonte Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
    <nav class="navbar">
@@ -17,11 +16,12 @@
         <a href="index.html">
             <img src="imagens/favicon.png" alt="Logo ABRACE, um livro aberto com pessoas formando um coração segurando o planeta" class="logo">        
         </a>
-        <link rel="icon" type="image/png" href="https://i.ibb.co/tPD1N37x/Whats-App-Image-2025-05-18-at-17-53-05-removebg-preview.png">
+        <link rel="icon" type="image/png" href="imagens/favicon.png">
         <ul>
             <li><a href="index.html">Início</a></li>
             <li><a href="portugues.html" class="active">Português</a></li>
             <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
         </ul>
     </div>
 </nav>
@@ -31,8 +31,9 @@
         <h1>Direitos e documentação</h1>
         <p>Conheça seus direitos e deveres como imigrante ou refugiado no Brasil, além dos documentos necessários para sua regularização no país.</p>
     </div>
-    <div class="container">
-        <div class="card-doc">
+    <div class="conteudo-recursos">
+        <div>
+            <div class="card-doc">
             <h2 class="card-title">Documentos essenciais</h2>
 
             <div class="accordion">
@@ -97,7 +98,66 @@
                     </div>
                 </div>
             </div>
+        
+        <div class="card-direitos">
+            <h2 class="card-title">Seus Direitos</h2>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Direito a saúde
+                        <span class="icon">&#9660;</span> </button>
+                    <div class="accordion-content">
+                            <p>Todos os imigrantes e refugiados, independentemente de sua situação migratória, têm direito ao atendimento gratuito no Sistema Único de Saúde (SUS), incluindo consultas, exames, internações e medicamentos.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Direito à Educação
+                        <span class="icon">&#9660;</span>
+                    </button>
+                    <div class="accordion-content">
+                            <p>Crianças e adolescentes imigrantes têm direito à matrícula na rede pública de ensino, mesmo sem documentação. Adultos podem acessar programas de educação para jovens e adultos, bem como universidades públicas através do ENEM ou processos seletivos específicos.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        Direito ao Trabalho
+                        <span class="icon">&#9660;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Imigrantes regularizados e solicitantes de refúgio têm direito de trabalhar legalmente no Brasil, com os mesmos direitos trabalhistas dos brasileiros, como salário mínimo, férias remuneradas, 13º salário e proteção contra discriminação.</p>
+                    </div>
+                </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
+        <div>
+            <div class="card-lateral-doc">
+                <h2>Direitos Humanos</h2>
+                <h2>Disque 100</h2>
+                <p>Canal gratuito para denúncias de violações de direitos humanos, disponível 24h por dia, todos os dias da semana.Ligação gratuita, com atendimento em português, inglês e espanhol.</p>            
+            </div>
+            <div class="card-lateral-doc">
+                <h2>Onde Buscar Ajuda</h2>
+                <p>Defensoria Pública da União</p>
+                <p>Assistência jurídica gratuita para imigrantes e refugiados</p>
+                <hr>
+                <h2>ACNUR - Alto Comissariado das Nações Unidas para os Refugiados</h2>
+                <p>Assistência jurídica gratuita para imigrantes e refugiados</p>
+                <hr>
+                <h2>CRAI - Centros de Referência e Atendimento para Imigrante</h2>
+                <p>Orientações e encaminhamentos gratuitos para serviços públicos</p>
+                <hr>
+                <h2>ONGs e Organizações da Sociedade Civil</h2>
+                <p>Diversas organizações oferecem apoio jurídico, social e humanitário</p>
+            </div>
+        </div>
+        
     </div>
 
 
@@ -108,5 +168,6 @@
         <p>Licenciado sob a <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons</a>.</p>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

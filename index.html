@@ -9,7 +9,6 @@
     <!-- Fonte Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 <nav class="navbar">
@@ -18,11 +17,13 @@
             <img src="imagens/favicon.png" alt="Logo ABRACE, um livro aberto com pessoas formando um coração segurando o planeta" class="logo">
         </a>
         <ul>
-        <link rel="icon" type="image/png" href="https://i.ibb.co/tPD1N37x/Whats-App-Image-2025-05-18-at-17-53-05-removebg-preview.png">
+        <link rel="icon" type="image/png" href="imagens/favicon.png">
 
             <li><a href="index.html">Início</a></li>
             <li><a href="portugues.html" class="active">Português</a></li>
             <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+
 
         </ul>
     </div>
@@ -47,14 +48,19 @@
         <h4>Oferecemos diversos recursos para facilitar sua adaptação e integração ao Brasil. Navegue pelas opções abaixo e encontre o suporte necessário para cada etapa de sua jornada.</h4>
     </div>
         <div class="recursos">
-            <div class="card-recursos">
-                <h3>Regularização Migratória</h3>
-                <p>Informações sobre como regularizar sua situação no Brasil, obter documentos e conhecer seus direitos.</p>
-            </div>
-            <div class="card-recursos">
-                <h3>Orientação Legal</h3>
-                <p>Informações sobre direitos, documentação e acesso a serviços públicos no Brasil.</p>
-            </div>
+            <a href="recursos.html" class="card-recursos-link">
+                <div class="card-recursos">
+                    <h3>Regularização Migratória</h3>
+                    <p>Informações sobre como regularizar sua situação no Brasil, obter documentos e conhecer seus direitos.</p>
+                </div>
+            </a>
+
+            <a href="portugues.html" class="card-recursos-link">
+                <div class="card-recursos">
+                    <h3>Idioma Português</h3>
+                    <p>Recursos para aprender o português brasileiro, materiais didáticos e dicas práticas.</p>
+                </div>
+            </a>
             <div class="card-recursos">
                 <h3>Integração Cultural</h3>
                 <p>Atividades para promover a inclusão social e a troca cultural entre comunidades.</p>
@@ -76,6 +82,6 @@
         <p>Licenciado sob a <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons</a>.</p>
     </div>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

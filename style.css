@@ -19,7 +19,8 @@ body {
 }
 
 .navbar {
-    background-color: #E8E8E8; 
+    background-color: #06172C; 
+    color: #ffffff;
     padding: 15px 0;
     
 }
@@ -32,8 +33,23 @@ body {
 }
 
 .logo {
+    width: 60px;
     height: 60px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
 
 nav ul {
     list-style: none;
@@ -44,7 +60,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #06172C; 
+    color: #ffffff; 
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -60,9 +76,9 @@ nav ul li a.active {
 
 
 .banner {
-    background-color: #E8E8E8;
+    background-color: #06172C;
     padding: 60px 20px;
-    color: #06172C;
+    color: #ffffff;
     text-align: left;
 }
 
@@ -88,8 +104,8 @@ nav ul li a.active {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #06172C; 
-    color: white; 
+    background-color: #ffffff; 
+    color: #06172C; 
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -713,4 +729,90 @@ nav ul li a.active {
     .card-membro h2 {
         font-size: 1.3em;
     }
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #06172C;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #E8E8E8;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 576px) {
+  .banner h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .banner p {
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
+
+.video-section iframe {
+  width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .recursos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-recursos {
+    width: 90%;
+    height: auto;
+  }
+}
+
+
+/* troca de idioma*/
+.language-switch {
+  text-align: right;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+.language-switch a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #06172C;
+}
+
+.language-switch a:hover {
+  color: #EB7423;
 }

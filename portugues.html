@@ -13,17 +13,16 @@
 <body>
    <nav class="navbar">
     <div class="container header-container">
-        <a href="index.html">
-            <img src="imagens/favicon.png" alt="Logo ABRACE, um livro aberto com pessoas formando um coração segurando o planeta" class="logo">
-        </a>
 
-        <!-- Botão do menu hambúrguer para navegação responsiva 
         <button class="hamburger-menu" aria-label="Abrir menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
-        -->
+
+        <a href="index.html">
+            <img src="imagens/favicon.png" alt="Logo ABRACE, um livro aberto com pessoas formando um coração segurando o planeta" class="logo">
+        </a>        
 
         <ul class="nav-links">
             <li><a href="index.html">Início</a></li>
@@ -39,37 +38,50 @@
         <p>O domínio da língua portuguesa é fundamental para sua integração ao Brasil. Disponibilizamos recursos e ferramentas para facilitar seu aprendizado..</p>
     </div>
 
-        <div class="content-box" >
-        <div class="dica-portugues">
-            <div class="caixa-frase">
-                <h2>Frases comum do dia a dia</h2>
+        <div class="content-box">
+    
+    <div class="caixa-frase">
+        <h2>Frases comum do dia a dia</h2>
 
-                <div class="frase">
-                    <strong>Olá, Tudo bem? / oi como vai?</strong>
-                    <p>Hello, how are you?<br>Hola, cómo estás?</p>
-                </div>
-
-                <div class="frase">
-                    <strong>Meu nome é...</strong>
-                    <p>My name is…<br>Mi nombre es…</p>
-                </div>
-
-                <div class="frase">
-                    <strong>Como eu chego a…?</strong>
-                    <p>How do I get to…?<br>Cómo llego a…?</p>
-                </div>
-
-                <a href="https://rioandlearn.com/pt-br/frases-uteis-em-portugues/" target="_blank">
-                    <button>Aprenda Mais!</button>
-                </a>
-            </div>
-
-            <div class="card-lateral">
-                <h2>Dica Cultural</h2>
-                <p>No Brasil, as pessoas costumam ser muito afetuosas e expressivas. Não se surpreenda com abraços, beijos no rosto e conversas informais mesmo em ambientes profissionais. Os brasileiros valorizam muito o contato pessoal e as relações interpessoais.</p>
-            </div>
+        <div class="frase">
+            <strong>Olá, Tudo bem? / oi como vai?</strong>
+            <p>Hello, how are you?<br>Hola, cómo estás?</p>
         </div>
+
+        <div class="frase">
+            <strong>Meu nome é...</strong>
+            <p>My name is…<br>Mi nombre es…</p>
         </div>
+
+        <div class="frase">
+            <strong>Como eu chego a…?</strong>
+            <p>How do I get to…?<br>Cómo llego a…?</p>
+        </div>
+
+        <button class="saiba-mais-btn" onclick="window.open('https://rioandlearn.com/pt-br/frases-uteis-em-portugues/', '_blank')">
+                            Aprenda mais!
+        </button>
+    </div>
+
+    <!-- Cards Laterais -->
+    <div class="container-lateral">
+        <div class="card-lateral">
+            <h2>Dica Cultural</h2>
+            <p>No Brasil, as pessoas costumam ser muito afetuosas e expressivas. Não se surpreenda com abraços, beijos no rosto e conversas informais mesmo em ambientes profissionais. Os brasileiros valorizam muito o contato pessoal e as relações interpessoais.</p>
+        </div>
+
+        <div class="card-lateral">
+            <h2>Dica Cultural</h2>
+            <p>A culinária brasileira é rica e diversificada, com pratos típicos em cada região. Sabores como o arroz com feijão, a feijoada, o acarajé e o churrasco representam a mistura de culturas e ingredientes locais. Comer no Brasil é um momento de confraternização e acolhimento!</p>
+            
+            <button class="saiba-mais-btn" onclick="window.open('https://www.penaestrada.blog.br/comidas-tipicas-do-brasil/', '_blank')">
+                            Saiba mais sobre o RNM
+            </button>
+        </div>
+    </div>
+
+</div>
+
         
     </main>
 

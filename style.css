@@ -393,10 +393,18 @@ nav ul li a.active {
 /*PAGINA RECURSOS*/
 /*****************/
 
+.conteudo-linha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
 .saiba-mais-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #06172C;
+    background-color: #EB7423;
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 8px;
@@ -404,23 +412,79 @@ nav ul li a.active {
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
     text-align: center;
+    outline: none;
+    border: none;
 }
 
 .saiba-mais-btn:hover {
-    background-color: #EB7423;
+    background-color: #06172C;
     color: #FFFFFF;
     transform: scale(1.05);
 }
 
-.card-doc{
+.card-doc {
+    flex: 1 1 65%;
+    min-width: 300px;
+    background-color: #fff;
     color: #06172C;
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 12px;
+    padding: 32px 28px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 18px rgba(6, 23, 44, 0.10), 0 2px 8px rgba(235, 116, 35, 0.06);
+    border: 2px solid #EB7423;
+    transition: box-shadow 0.3s, transform 0.3s;
+    font-size: 1.08em;
 }
-.card-direitos{
+
+.card-doc:hover {
+    box-shadow: 0 10px 28px rgba(6, 23, 44, 0.15), 0 4px 16px rgba(235, 116, 35, 0.10);
+    transform: translateY(-5px) scale(1.01);
+    border-color: #c7601c;
+}
+
+.card-doc h2, .card-doc h3 {
+    color: #EB7423;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-doc p, .card-doc ul, .card-doc li {
+    color: #555;
+    line-height: 1.7;
+}
+
+.card-direitos {
     margin-top: 20px;
+    flex: 1 1 65%;
+    min-width: 300px;
+    background-color: #fff;
+    color: #06172C;
+    border-radius: 12px;
+    padding: 32px 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 18px rgba(6, 23, 44, 0.10), 0 2px 8px rgba(235, 116, 35, 0.06);
+    border: 2px solid #EB7423;
+    transition: box-shadow 0.3s, transform 0.3s;
+    font-size: 1.08em;
+}
+
+.card-direitos:hover {
+    box-shadow: 0 10px 28px rgba(6, 23, 44, 0.15), 0 4px 16px rgba(235, 116, 35, 0.10);
+    transform: translateY(-5px) scale(1.01);
+    border-color: #c7601c;
+}
+
+.card-direitos h2, .card-direitos h3 {
+    color: #EB7423;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-direitos p, .card-direitos ul, .card-direitos li {
+    color: #555;
+    line-height: 1.7;
 }
 .conteudo-recursos {
     display: flex;
@@ -439,12 +503,24 @@ nav ul li a.active {
 }
 
 .card-lateral-doc {
+    width: 280px;
+    height: 324px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    max-width: 1000px;
     margin-left: 20px;
-    margin-right: auto;
-    align-items: flex-start;
-    margin-top: 50px;
+    margin-right: 0;
+    align-items: center; /* centraliza o conteúdo horizontalmente */
+    text-align: center;  /* centraliza o texto */
+    margin-top: 20px;
+    flex: 0 0 280px;
+}
+
+.card-lateral-doc h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .card-lateral-doc a {
@@ -456,20 +532,84 @@ nav ul li a.active {
     color: #EB7423;
 }
 
-.card-lateral-doc-ajuda {
+.card-ajuda {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-ajuda-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 24px;
+    background-color: #06172C;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(6, 23, 44, 0.12);
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 350px;
+    margin-right: 0;
+}
+.card-ajuda-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(6, 23, 44, 0.15);
+}
+
+@media (max-width: 768px) {
+    .card-ajuda {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-ajuda-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .conteudo-linha {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-doc,
+    .card-lateral-doc {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+.card-ajuda-item:last-child {
+    margin-right: 0;
+}
+
+.card-ajuda-item h3,
+.card-ajuda-item p {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .card-ajuda-item {
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
+.card-ajuda {
     flex-shrink: 0;
     flex-grow: 1;
     min-width: 300px;
 }
 
-.card-lateral-doc-ajuda h1,
-.card-lateral-doc-ajuda h2,
-.card-lateral-doc-ajuda a {
+.card-ajuda h1{
+    color: #EB7423;
+}
+.card-ajuda a {
     color: inherit;
     text-decoration: none;
 }
 
-.card-lateral-doc-ajuda a:hover {
+.card-ajuda a:hover {
     color: #EB7423;
 }
 
@@ -486,7 +626,7 @@ nav ul li a.active {
 
     .conteudo-recursos > div:first-child,
     .card-lateral-doc,
-    .card-lateral-doc-ajuda {
+    .card-ajuda {
         flex-basis: auto;
         width: 100%;
         max-width: 500px;

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Código antigo do accordion (já existente)
     const accordionHeaders = document.querySelectorAll('.accordion-header');
 
     accordionHeaders.forEach(header => {
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Novo: Menu hamburguer
+    //Menu hamburguer
     const hamburger = document.querySelector('.hamburger-menu');
     const navLinks = document.querySelector('.nav-links');
 

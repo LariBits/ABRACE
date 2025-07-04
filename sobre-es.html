@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
+
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABRACE</title>
-    <link rel="icon" type="image/png" href="imagens/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ABRACE</title>
+<link href="imagens\favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet"/>
+<script src="script-acessivel.js"></script>
+
+<link href="style.css" rel="stylesheet"/>
+
 </head>
 <body>
+    <div id="acessibilidade-menu" class="acessibilidade-menu" aria-label="Menu de acessibilidade">
+  <button onclick="toggleAccessibilityMenu()" aria-haspopup="true" aria-controls="opcoesAcessibilidade" aria-label="Abrir menu de acessibilidade">♿ Acessibilidade</button>
+  <div id="opcoesAcessibilidade" hidden>
+    <button onclick="increaseText()">Aumentar texto</button>
+    <button onclick="toggleHighContrast()">Alto contraste</button>
+    <button onclick="highlightLinks()">Destacar links</button>
+    <button onclick="resetStyles()">Redefinir</button>
+  </div>
+</div>
+
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
 <div class="language-switch">
     <a href="sobre.html">🇧🇷 Portugués</a> 
@@ -81,18 +96,26 @@
                 </div>
 
                 <div class="card-membro">
-                    <img src="imagens/membro2.jpeg" alt="Foto de [Nombre del Miembro 2]">
-                    <h2>Nombre del Miembro 2</h2>
-                    <p class="role">Cargo / Función</p>
-                    <p class="location">Ciudad - Estado</p>
-                </div>
+<img alt="Foto de Paola Pires" src="imagens/paola.jpeg"/>
+<h2>Paola Cassiano Pires</h2>
+<p class="role">Estudiante de TSI en el IF-SP</p>
+<p class="location">São João da Boa Vista - SP</p>
+<p>
+  <a href="https://www.linkedin.com/in/paola-pires-54bb04351/" target="_blank">LinkedIn</a> | 
+  <a href="https://github.com/Paola-pires" target="_blank">GitHub</a>
+</p>
 
-                <div class="card-membro">
-                    <img src="imagens/membro3.jpeg" alt="Foto de [Nombre del Miembro 3]">
-                    <h2>Nombre del Miembro 3</h2>
-                    <p class="role">Cargo / Función</p>
-                    <p class="location">Ciudad - Estado</p>
-                </div>
+</div>
+<div class="card-membro">
+<img alt="Foto de Erika Toledo Silva" src="imagens/erika.jpg"/>
+<h2>Erika Toledo Silva</h2>
+<p class="role">Estudiante de TSI en el IF-SP</p>
+<p class="location">São João da Boa Vista - SP</p>
+<p>
+  <a href="https://www.linkedin.com/in/erika-toledo-335004269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a> | 
+  <a href="https://github.com/itsErikaToledo" target="_blank">GitHub</a>
+</p>
+</div>
 
                 <div class="card-membro">
                     <img src="imagens/membro4.jpeg" alt="Foto de [Nombre del Miembro 4]">

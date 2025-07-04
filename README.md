@@ -27,7 +27,7 @@ Queremos ajudar pessoas que estão começando uma nova vida no Brasil a se senti
 
 ## Design
 
-O layout foi criado no **Figma**, com uma identidade visual acolhedora e acessível.
+O layout foi criado no **Figma**
 
 🔗 Link do protótipo: [Ver no Figma](https://www.figma.com/proto/kWTZHVNAIlrmNsTE8ayYgw/Projeto-ABRACE?node-id=0-1&t=ta0LFqwBIjb0Q1J1-1)
 

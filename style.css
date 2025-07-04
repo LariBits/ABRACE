@@ -1054,7 +1054,8 @@ nav ul li a.active {
 
 /* troca de idioma*/
 .language-switch {
-  text-align: right;
+  background-color: #06172C;
+  text-align:left;
   padding: 10px;
   font-size: 0.9em;
 }
@@ -1062,9 +1063,75 @@ nav ul li a.active {
 .language-switch a {
   margin-left: 10px;
   text-decoration: none;
-  color: #06172C;
+  color:white;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .language-switch a:hover {
   color: #EB7423;
 }
+
+/* adicionado por paola */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #EB7423;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+  a:focus,
+  button:focus {
+    outline: 2px dashed #EB7423;
+    outline-offset: 4px;
+  }
+
+  /* acessivel */
+  .acessibilidade-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    background: #06172C;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .acessibilidade-menu button {
+    display: block;
+    background-color: #EB7423;
+    color: white;
+    border: none;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .acessibilidade-grande {
+    font-size: 1.25em;
+  }
+
+  .acessibilidade-contraste {
+    background-color: black !important;
+    color: yellow !important;
+  }
+
+  .acessibilidade-links a {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  

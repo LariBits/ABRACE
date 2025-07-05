@@ -416,13 +416,19 @@ nav ul li a.active::after {
 }
 
 .card-ajuda-item:hover {
+    color: #EB7423;
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(6, 23, 44, 0.15);
 }
 
-/* Mantém o texto alinhado verticalmente mesmo com diferentes tamanhos */
+
 .card-ajuda-item h2 {
-    flex-grow: 1; /* Faz o título crescer para ocupar espaço disponível */
+    flex-grow: 1;
+    color: #EB7423;
+}
+.card-ajuda-item h2:hover {
+    color: #EB7423;
+    text-decoration: underline;
 }
 
 /* Responsividade */

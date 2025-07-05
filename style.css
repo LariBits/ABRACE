@@ -1160,6 +1160,8 @@ nav ul li a.active::after {
     
     .hamburger-menu {
         display: flex;
+        background: none;
+        border: none;
         flex-direction: column;
         cursor: pointer;
         gap: 5px;
@@ -1169,6 +1171,7 @@ nav ul li a.active::after {
     .hamburger-menu .bar {
         width: 25px;
         height: 3px;
+        color: #06172C;
         background-color: #ffffff;
         transition: 0.3s;
     }
@@ -1287,6 +1290,8 @@ nav ul li a.active::after {
 /* ===== MENU HAMBURGUER ===== */
 .hamburger-menu {
     display: none;
+    background: none;
+    border: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;

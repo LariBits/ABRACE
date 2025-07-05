@@ -1175,7 +1175,7 @@ nav ul li a.active::after {
         background-color: #ffffff;
         transition: 0.3s;
     }
-    
+
     .card-ajuda {
         flex-direction: column;
         align-items: center;
@@ -1387,6 +1387,7 @@ nav ul li a.active::after {
     .card-ajuda-item {
         width: 100%;
         max-width: 100%;
+        margin: auto;
     }
     
     .container-membros {

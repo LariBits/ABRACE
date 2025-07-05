@@ -1,41 +1,63 @@
-
+/* ===== RESET E ESTILOS GERAIS ===== */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: #ffffff; 
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat';
-    color: #06172C; 
-    box-sizing: border-box
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    color: #06172C;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ===== HEADER E NAVEGAÇÃO ===== */
+.language-switch {
+    background-color: #06172C;
+    padding: 10px 15px;
+    text-align: right;
+}
+
+.language-switch a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.language-switch a:hover {
+    color: #EB7423;
 }
 
 .navbar {
-    background-color: #06172C; 
+    background-color: #06172C;
     color: #ffffff;
     padding: 15px 0;
-    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .logo {
     width: 100px;
+    height: auto;
 }
-
 
 nav ul {
     list-style: none;
@@ -46,21 +68,35 @@ nav ul {
 }
 
 nav ul li a {
-    color: #ffffff; 
+    color: #ffffff;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
+    position: relative;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #EB7423; 
-    text-decoration: underline;
-    text-decoration: none;
-    color: inherit;
+    color: #EB7423;
 }
 
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #EB7423;
+    transition: width 0.3s ease;
+}
 
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* ===== BANNER ===== */
 .banner {
     background-color: #06172C;
     padding: 60px 20px;
@@ -69,53 +105,50 @@ nav ul li a.active {
 }
 
 .banner h1 {
-    font-size: 60px;
+    font-size: 3.5rem;
     font-weight: bold;
-    margin-top: 0%;
-    margin-bottom: 0%;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
 .banner p {
-    font-size: 25px;
-    margin-top: 0%;
-    margin-bottom: 0%;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
 }
 
 .cor-laranja {
-    color: #EB7423; 
+    color: #EB7423;
     font-weight: bold;
 }
 
 .btn {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #ffffff; 
-    color: #06172C; 
+    padding: 12px 25px;
+    background-color: #ffffff;
+    color: #06172C;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .btn:hover {
-    background-color: #EB7423; 
+    background-color: #EB7423;
     color: white;
     border-color: #EB7423;
+    transform: translateY(-3px);
 }
 
-/**************/
-/* index.html */
-/**************/
-
+/* ===== SEÇÃO DE SERVIÇOS ===== */
 .servicos {
-    padding: 40px 20px;
+    padding: 40px 0;
     text-align: center;
-    
 }
 
 .servicos h2 {
-    font-size: 2em;
+    font-size: 2.2rem;
     margin-bottom: 15px;
     color: #06172C;
 }
@@ -124,6 +157,10 @@ nav ul li a.active {
     margin-bottom: 40px;
     color: #555;
     font-weight: normal;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .recursos {
@@ -167,27 +204,33 @@ nav ul li a.active {
     margin: 0;
 }
 
-/* VIDEO */
+/* ===== SEÇÃO DE VÍDEO ===== */
 .video-section {
-    padding: 40px 20px;
+    padding: 40px 0;
     text-align: center;
 }
 
 .video-section h2 {
     color: #06172C;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 2rem;
 }
 
-/**********/
-/* Rodapé */
-/**********/
+.video-section iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== RODAPÉ ===== */
 .rodape {
     background-color: #06172C;
     color: white;
     text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9em;
-    margin-top: 40px;
+    padding: 30px 10px;
+    margin-top: 60px;
 }
 
 .rodape-content {
@@ -199,129 +242,122 @@ nav ul li a.active {
     color: #EB7423;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .rodape a:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
-/*****************/
-/* POTUGUES.HTML */
-/*****************/
-
-.content-box {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* ===== PÁGINA PORTUGUES.HTML ===== */
 .sobre-pag {
-    max-width: 600px;
-    margin: auto;
+    max-width: 800px;
+    margin: 40px auto;
     padding: 20px;
     text-align: center;
 }
 
 .sobre-pag h1 {
-    color: #06172C; 
+    color: #06172C;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .sobre-pag p {
     color: #555;
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 .content-box {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
 }
 
-/* Caixa de frases do dia a dia */
 .caixa-frase {
-    flex: 2;
-    height: 500px;
-    min-width: 350px;
-    margin-right: 0;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
     border: 2px solid #EB7423;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(235, 116, 35, 0.08), 0 1.5px 6px rgba(6, 23, 44, 0.07);
-    padding: 30px 25px;
-    transition: box-shadow 0.3s, transform 0.3s;
-    text-align: left;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(235, 116, 35, 0.1);
+    transition: all 0.3s ease;
+}
+
+.caixa-frase:hover {
+    box-shadow: 0 8px 25px rgba(235, 116, 35, 0.15);
 }
 
 .caixa-frase h2 {
     color: #EB7423;
     margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
 .caixa-frase p {
     color: #06172C;
-    font-size: 1.1em;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.7;
     margin-bottom: 0;
 }
 
-/* Container para os cards laterais (dicas culturais) */
 .container-lateral {
-    display: flex; /* Transforma o container-lateral em um contêiner flexível */
-    flex-direction: column; /* Empilha os cards laterais verticalmente dentro do seu container */
-    gap: 20px; /* Espaçamento entre os cards .card-lateral */
-    flex: 1; /* Permite que este container ocupe uma parte menor do espaço */
-    min-width: 280px; /* Largura mínima para o container lateral */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
 }
 
-/* Cards laterais individuais */
 .card-lateral {
     background-color: #06172C;
     color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 280px;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
     text-align: center;
 }
-.card-lateral:nth-of-type(2) {
-    margin-top: 20px;
+
+.card-lateral:hover {
+    transform: translateY(-5px);
 }
 
 .card-lateral h2 {
-    color: #EB7423; /* Título laranja */
-    margin-bottom: 10px;
+    color: #EB7423;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 .card-lateral p {
-    color: #fff; /* Fonte branca */
-    font-size: 0.95em;
-    margin: 0 0 15px 0; /* Espaço abaixo do texto para separar do botão */
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 
 .btn-pt {
     display: inline-block;
-    margin-top: 10px; /* Espaço acima do botão */
     padding: 10px 20px;
     background-color: #EB7423;
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-    text-align: center;
-    outline: none;
+    transition: all 0.3s ease;
     border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .btn-pt:hover {
@@ -330,69 +366,85 @@ nav ul li a.active {
     transform: scale(1.05);
 }
 
-/* Media query para responsividade em telas menores (celulares e tablets) */
-@media (max-width: 768px) {
-    .content-box {
-        flex-direction: column; /* Empilha a caixa de frases e o container lateral */
-        align-items: center; /* Centraliza os itens quando empilhados */
-        padding: 0 15px; /* Adiciona padding lateral para telas menores */
-    }
-
-    .caixa-frase,
-    .container-lateral {
-        width: 100%; /* Ocupam a largura total disponível */
-        max-width: 500px; /* Limita a largura máxima para leitura */
-        margin-right: 0; /* Garante que não haja margem extra */
-        margin-bottom: 20px; /* Adiciona espaço entre os blocos quando empilhados */
-    }
-
-    .card-lateral {
-        margin-bottom: 0; /* Remove margem inferior extra para os cards laterais internos */
-    }
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-/* Sobre a página */
-.sobre-pag {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.sobre-pag h1 {
-    color: #06172C; 
-}
-
-.sobre-pag p {
-    color: #555;
-}
-
-/* Bloco de dicas / frases */
-.dica-portugues {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
+/*****************/
+/*PAGINA RECURSOS*/
+/*****************/
 
 /*****************/
 /*PAGINA RECURSOS*/
 /*****************/
 
+/* Container principal - Mantido */
+.conteudo-recursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+/* Cards de ajuda - Ajustado */
+.card-ajuda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.card-ajuda-item {
+    flex: 1; /* Distribui o espaço igualmente */
+    min-width: 250px; /* Largura mínima para cada card */
+    max-width: 300px; /* Largura máxima para manter proporção */
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #06172C;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(6, 23, 44, 0.12);
+    transition: all 0.3s ease;
+    height: 100%; /* Altura automática baseada no conteúdo */
+}
+
+/* Garante que todos os cards tenham a mesma altura */
+.card-ajuda {
+    align-items: stretch;
+}
+
+.card-ajuda-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(6, 23, 44, 0.15);
+}
+
+/* Mantém o texto alinhado verticalmente mesmo com diferentes tamanhos */
+.card-ajuda-item h2 {
+    flex-grow: 1; /* Faz o título crescer para ocupar espaço disponível */
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .card-ajuda-item {
+        max-width: calc(50% - 20px); /* 2 cards por linha em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-ajuda {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-ajuda-item {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Mantém os outros estilos como estão */
 .conteudo-linha {
     display: flex;
     flex-wrap: wrap;
@@ -456,6 +508,7 @@ nav ul li a.active {
 
 .card-direitos {
     margin-top: 20px;
+    min-height: 420px;
     flex: 1 1 65%;
     min-width: 300px;
     background-color: #fff;
@@ -486,25 +539,10 @@ nav ul li a.active {
     color: #555;
     line-height: 1.7;
 }
-.conteudo-recursos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
-    gap: 20px;
-}
-
-.conteudo-recursos > div:first-child {
-    flex-basis: 100%;
-    margin-bottom: 20px;
-}
 
 .card-lateral-doc {
     width: 280px;
-    height: 324px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -532,73 +570,13 @@ nav ul li a.active {
     color: #EB7423;
 }
 
-.card-ajuda {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.card-ajuda-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 24px;
-    background-color: #06172C;
-    color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(6, 23, 44, 0.12);
-    margin-bottom: 0;
-    width: 100%;
-    max-width: 350px;
-    margin-right: 0;
-}
-.card-ajuda-item:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(6, 23, 44, 0.15);
-}
-
-@media (max-width: 768px) {
-    .card-ajuda {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card-ajuda-item {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-    .conteudo-linha {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-doc,
-    .card-lateral-doc {
-        width: 100%;
-        max-width: 500px;
-    }
-}
-
 .card-ajuda-item:last-child {
     margin-right: 0;
 }
 
 .card-ajuda-item h3,
 .card-ajuda-item p {
-    color: #fff;
-}
-
-@media (max-width: 768px) {
-    .card-ajuda-item {
-        max-width: 100%;
-        margin-right: 0;
-    }
-}
-.card-ajuda {
-    flex-shrink: 0;
-    flex-grow: 1;
-    min-width: 300px;
+    color: #EB7423;
 }
 
 .card-ajuda h1{
@@ -673,6 +651,11 @@ nav ul li a.active {
 .accordion-header.active .icon {
     transform: rotate(180deg);
 }
+
+#a{
+    color: #fff;
+}
+
 
 .accordion-content {
     background-color: #fff;
@@ -763,10 +746,9 @@ nav ul li a.active {
     margin-bottom: 0;
 }
 
-/* PAGINA SOBRE */
-
+/* ===== PÁGINA SOBRE.HTML ===== */
 .section-cards-missao-objetivos {
-    padding: 80px 20px;
+    padding: 80px 0;
     text-align: center;
 }
 
@@ -783,28 +765,33 @@ nav ul li a.active {
     flex: 1;
     min-width: 300px;
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     padding: 40px;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card-sobre:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .card-sobre h1 {
-    font-size: 25px;
+    font-size: 1.8rem;
     margin-top: 0;
     margin-bottom: 25px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .card-sobre p {
-    font-size: 17px;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .card-sobre ul {
@@ -814,324 +801,630 @@ nav ul li a.active {
 }
 
 .card-sobre ul li {
-    font-size: 17px;
-    line-height: 1.0;
+    font-size: 1.1rem;
+    line-height: 1.7;
     color: #ffffff;
     margin-bottom: 15px;
     position: relative;
+    padding-left: 25px;
 }
 
-.card-sobre ul li:last-child {
-    margin-bottom: 0;
+.card-sobre ul li:before {
+    content: "•";
+    color: #EB7423;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
 }
 
 .card-missao {
     background-color: #06172C;
 }
 
-.card-missao h1 {
+#titulo-missao {
     color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
+
+#titulo-objetivos {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
 
 .card-objetivos {
     background-color: #EB7423;
 }
 
-.card-objetivos h1 {
-    color: #ffffff;
+/* ===== SEÇÃO DA EQUIPE ===== */
+.equipe-section {
+    padding: 80px 0;
+    background-color: #06172C;
+    text-align: center;
 }
-/* --- Responsividade --- */
+
+.container-equipe {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-equipe h1 {
+    font-size: 2.5rem;
+    color: #EB7423;
+    margin-bottom: 15px;
+}
+
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.conteudo-recursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.conteudo-linha {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+}
+
+.card-doc, .card-direitos {
+    flex: 1 1 65%;
+    min-width: 300px;
+    background-color: #fff;
+    color: #06172C;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #EB7423;
+    transition: all 0.3s ease;
+    font-size: 1.08rem;
+}
+
+.card-doc:hover, .card-direitos:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+    border-color: #c7601c;
+}
+
+.card-doc h2, .card-doc h3, 
+.card-direitos h2, .card-direitos h3 {
+    color: #EB7423;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-doc p, .card-doc ul, .card-doc li, 
+.card-direitos p, .card-direitos ul, .card-direitos li {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card-lateral-doc {
+    background-color: #0d263b;
+    color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-lateral-doc h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card-lateral-doc p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-ajuda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.card-ajuda-item {
+    background-color: #06172C;
+    color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    width: 100%;
+    max-width: 350px;
+    min-height: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card-ajuda-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-ajuda-item h2 {
+    color: #EB7423;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-ajuda-item p {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.accordion-header {
+    background-color: #fff;
+    color: #2d3748;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.accordion-header:hover {
+    background-color: #f7fafc;
+}
+
+.accordion-header .icon {
+    color: #718096;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+}
+
+.accordion-header.active + .accordion-content {
+    max-height: 1000px;
+    padding: 15px;
+}
+
+.accordion-content p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.accordion-content ul {
+    padding-left: 20px;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.accordion-content li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+.saiba-mais-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #EB7423;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.saiba-mais-btn:hover {
+    background-color: #06172C;
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+.rodape {
+    background-color: #06172C;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 60px;
+}
+
+.rodape-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape a {
+    color: #EB7423;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.rodape a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.titulo {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.titulo h1 {
+    color: #06172C;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.titulo h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #EB7423;
+}
+
+/* Responsividade */
 @media (max-width: 992px) {
-    .card-sobre {
-        max-width: calc(100% - 40px); 
+    .conteudo-linha {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-doc, .card-direitos, .card-lateral-doc {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #06172C;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        z-index: 999;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        padding: 5px;
+    }
+    
+    .hamburger-menu .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        transition: 0.3s;
+    }
+    
+    .card-ajuda {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-ajuda-item {
+        max-width: 100%;
     }
 }
 
 @media (max-width: 576px) {
-    .card-sobre {
-        padding: 30px 20px;
+    .sobre-pag h1 {
+        font-size: 2rem;
     }
-
-    .card-sobre h1 {
-        font-size: 1.8em;
+    
+    .sobre-pag p {
+        font-size: 1rem;
     }
-
-    .card-sobre p,
-    .card-sobre ul li {
-        font-size: 1em;
-    }
-
-    .card-sobre ul li::before {
-        font-size: 1.1em;
-        top: 2px; 
+    
+    .card-doc, .card-direitos {
+        padding: 20px;
     }
 }
 
-/*GRUPO*/
-.equipe-section {
-    padding: 80px 20px; /* Espaçamento interno da seção */
-    background-color: #06172C; /* Fundo branco para a seção da equipe */
-    text-align: center; /* Centraliza o título e a descrição da equipe */
-}
-
-.container-equipe {
-    max-width: 1200px; /* Largura máxima do conteúdo da equipe */
-    margin: 0 auto; /* Centraliza o contêiner na página */
-}
-
-.titulo-equipe h1 {
-    font-size: 2.5em; /* Tamanho do título "Equipe" */
-    color: #EB7423; /* Cor do título */
-    margin-bottom: 15px;
-}
 
 .titulo-equipe p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     color: #d4d4d4;
-    line-height: 1.6;
-    margin-bottom: 50px; /* Espaço abaixo da descrição para os cards */
-    max-width: 800px; /* Limita a largura do parágrafo */
+    line-height: 1.7;
+    margin-bottom: 50px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .container-membros {
-    display: flex; /* Habilita o layout flexível para os cards de membro */
-    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    gap: 30px; /* Espaçamento entre os cards */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: stretch;
 }
 
 .card-membro {
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 30px 20px; /* Espaçamento interno do card */
-    text-align: center; /* Centraliza o conteúdo dentro de cada card */
-    width: 250px; /* Largura fixa para cada card de membro */
-    display: flex; /* Para centralizar o conteúdo verticalmente */
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
     flex-direction: column;
-    align-items: center; /* Alinha o conteúdo (texto e imagem) no centro */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito hover */
+    align-items: center;
 }
 
 .card-membro:hover {
-    transform: translateY(-8px); /* Leve levantamento ao passar o mouse */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover */
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .card-membro img {
-    width: 120px; /* Tamanho da imagem de perfil */
-    height: 120px; /* Garante que a imagem seja quadrada */
-    border-radius: 50%; /* Torna a imagem circular */
-    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
-    border: 3px solid #EB7423; /* Borda laranja ao redor da imagem */
-    margin-bottom: 20px; /* Espaço abaixo da imagem */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #EB7423;
+    margin-bottom: 20px;
 }
 
 .card-membro h2 {
-    font-size: 1.5em; /* Tamanho do nome do membro */
-    color: #ffffff; /* Cor do nome */
+    font-size: 1.5rem;
+    color: #06172C;
     margin-bottom: 10px;
     line-height: 1.3;
 }
 
-.card-membro .role { /* Estilo para o cargo */
-    font-size: 1em;
-    color: #ffffff;
-    margin-bottom: 5px;
+.card-membro .role {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.card-membro .location { /* Estilo para a localização */
-    font-size: 0.9em;
-    color: #c5c5c5;
-    margin-bottom: 0; /* Remove margem inferior do último p */
+.card-membro .location {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 20px;
 }
 
-/* --- Responsividade --- */
-@media (max-width: 768px) {
-    .titulo-equipe h1 {
-        font-size: 2.2em;
-    }
-
-    .titulo-equipe p {
-        font-size: 1em;
-        margin-bottom: 30px;
-    }
-
-    .card-membro {
-        width: calc(50% - 20px); /* Dois cards por linha em tablets */
-        min-width: 200px; /* Largura mínima para evitar que fiquem muito pequenos */
-        padding: 25px 15px;
-    }
+.card-membro p:last-of-type {
+    margin-top: auto;
+    padding-top: 15px;
+    width: 100%;
 }
 
-@media (max-width: 480px) {
-    .card-membro {
-        width: 90%; /* Um card por linha em celulares */
-        max-width: 300px; /* Garante que o card não seja muito largo */
-        padding: 20px 15px;
-    }
-
-    .card-membro img {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 15px;
-    }
-
-    .card-membro h2 {
-        font-size: 1.3em;
-    }
+.card-membro p a {
+    color: #EB7423;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
 }
 
+.card-membro p a:hover {
+    color: #c7601c;
+    text-decoration: underline;
+}
+
+/* ===== MENU HAMBURGUER ===== */
 .hamburger-menu {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    padding: 5px;
 }
 
 .hamburger-menu .bar {
     width: 25px;
     height: 3px;
-    background-color: #06172C;
+    background-color: #ffffff;
     transition: 0.3s;
 }
 
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 992px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .banner p {
+        font-size: 1.3rem;
+    }
+    
+    .card-sobre {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
-    .nav-links {
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    nav ul {
         display: none;
         flex-direction: column;
         gap: 10px;
-        background-color: #E8E8E8;
+        background-color: #06172C;
         position: absolute;
-        top: 70px;
-        right: 20px;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        z-index: 999;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.2);
     }
-
-    .nav-links.active {
+    
+    nav ul.active {
         display: flex;
     }
-
+    
     .hamburger-menu {
         display: flex;
+    }
+    
+    .banner h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .banner p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    
+    .video-section iframe {
+        height: 300px;
+    }
+    
+    .card-recursos {
+        max-width: 100%;
+    }
+    
+    .content-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .caixa-frase,
+    .container-lateral {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .conteudo-linha {
+        flex-direction: column;
+    }
+    
+    .card-doc,
+    .card-direitos,
+    .card-lateral-doc,
+    .card-lateral-ajuda,
+    .card-ajuda-item {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .container-membros {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-membro {
+        width: 100%;
+        max-width: 350px;
     }
 }
 
 @media (max-width: 576px) {
-  .banner h1 {
-    font-size: 2em;
-    text-align: center;
-  }
-
-  .banner p {
-    font-size: 1.2em;
-    text-align: center;
-  }
+    .banner {
+        padding: 40px 20px;
+    }
+    
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
+    }
+    
+    .servicos h2 {
+        font-size: 1.8rem;
+    }
+    
+    .video-section iframe {
+        height: 250px;
+    }
+    
+    .card-sobre {
+        padding: 30px 20px;
+    }
+    
+    .card-sobre h1 {
+        font-size: 1.6rem;
+    }
+    
+    .titulo-equipe h1 {
+        font-size: 2rem;
+    }
 }
-
-.video-section iframe {
-  width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  .recursos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-recursos {
-    width: 90%;
-    height: auto;
-  }
-}
-
-
-/* troca de idioma*/
-.language-switch {
-  background-color: #06172C;
-  text-align:left;
-  padding: 10px;
-  font-size: 0.9em;
-}
-
-.language-switch a {
-  margin-left: 10px;
-  text-decoration: none;
-  color:white;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.language-switch a:hover {
-  color: #EB7423;
-}
-
-/* adicionado por paola */
-
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #EB7423;
-    color: white;
-    padding: 8px;
-    z-index: 100;
-    transition: top 0.3s;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .skip-link:focus {
-    top: 0;
-  }
-  a:focus,
-  button:focus {
-    outline: 2px dashed #EB7423;
-    outline-offset: 4px;
-  }
-
-  /* acessivel */
-  .acessibilidade-menu {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 9999;
-    background: #06172C;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  .acessibilidade-menu button {
-    display: block;
-    background-color: #EB7423;
-    color: white;
-    border: none;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .acessibilidade-grande {
-    font-size: 1.25em;
-  }
-
-  .acessibilidade-contraste {
-    background-color: black !important;
-    color: yellow !important;
-  }
-
-  .acessibilidade-links a {
-    background-color: yellow;
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  

@@ -1317,7 +1317,23 @@ nav ul li a.active::after {
     
     .card-sobre {
         max-width: 100%;
+        padding: 30px 20px;
+        margin: 5px;
     }
+    
+    .card-sobre h1 {
+        font-size: 1.6rem;
+        margin: auto;
+    }
+
+    .card-sobre p {
+        margin: auto;
+    }
+
+    .card-sobre ul {
+        margin: 10px;
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -1355,6 +1371,12 @@ nav ul li a.active::after {
     .banner p {
         font-size: 1.1rem;
         text-align: center;
+    }
+
+    .btn {
+        text-align: center;
+        display: block;
+        margin: auto;
     }
     
     .video-section iframe {
@@ -1399,6 +1421,25 @@ nav ul li a.active::after {
         width: 100%;
         max-width: 350px;
     }
+
+    .card-sobre {
+        max-width: 100%;
+        padding: 30px 20px;
+        margin: 5px;
+    }
+    
+    .card-sobre h1 {
+        font-size: 1.6rem;
+        margin: auto;
+    }
+
+    .card-sobre p {
+        margin: auto;
+    }
+
+    .card-sobre ul {
+        margin: 10px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1413,7 +1454,7 @@ nav ul li a.active::after {
     .banner p {
         font-size: 1rem;
     }
-    
+
     .servicos h2 {
         font-size: 1.8rem;
     }
@@ -1424,10 +1465,20 @@ nav ul li a.active::after {
     
     .card-sobre {
         padding: 30px 20px;
+        margin: 5px;
     }
     
     .card-sobre h1 {
         font-size: 1.6rem;
+        margin: auto;
+    }
+
+    .card-sobre p {
+        margin: auto;
+    }
+
+    .card-sobre ul {
+        margin: 10px;
     }
     
     .titulo-equipe h1 {
